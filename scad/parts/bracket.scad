@@ -27,7 +27,7 @@ module bracket() {
             rotate([0, 0, i])
             translate([r, 0, 0]) {
                 translate([0, 0, 2])
-                cylinder(d = 4, h = 8);
+                cylinder(d = 5, h = 8);
 
                 cylinder(d = 3, h = 2);
             }
