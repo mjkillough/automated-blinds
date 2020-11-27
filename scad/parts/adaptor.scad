@@ -55,7 +55,7 @@ module adaptor() {
         }
 
         // Round bit:
-        cylinder(d = shaft_diameter + shaft_clearance, h = circular_height);
+        cylinder(d = shaft_diameter + shaft_clearance * 2, h = circular_height);
     }
 
     difference() {
