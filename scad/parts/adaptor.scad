@@ -4,7 +4,7 @@ $fn = 60;
 
 module adaptor() {
     // Inner radius of blind:
-    r = 11.5;
+    r = 12;
     // Height of this adaptor
     h = 25;
     // Height of circular part before flat bit to catch shaft:
@@ -21,7 +21,7 @@ module adaptor() {
     module fin() {
         intersection() {
             rotate([0, 0, 60])
-            square([r, 1]);
+            square([r, 2]);
 
             // Intersect with blind's inner radius to ensure edges of fin doesn't
             // overlap.
@@ -32,9 +32,12 @@ module adaptor() {
     module inner() {
         circle(d = 18);
 
-        for (i = [0, 1]) {
-            mirror([i, 0, 0])
-            fin();
+        for (y = [0, 1]) {
+            mirror([0, y, 0])
+            for (x = [0, 1]) {
+                mirror([x, 0, 0])
+                fin();
+            }
         }
     }
 
