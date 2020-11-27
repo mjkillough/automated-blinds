@@ -2,7 +2,7 @@ $fn = 60;
 
 module blind(length = 10) {
     // Inner radius
-    r = 11.5;
+    r = 12.7;
 
     module tube() {
         difference() {
