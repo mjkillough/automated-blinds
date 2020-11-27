@@ -23,13 +23,14 @@ module bracket() {
         $fn = 60;
         d = 44;
         r = d / 2;
+        clearance = 0.2;
         for (i = [45:90:360])
             rotate([0, 0, i])
             translate([r, 0, 0]) {
                 translate([0, 0, 2])
-                cylinder(d = 5, h = 8);
+                cylinder(d = 5.5 + clearance, h = 8);
 
-                cylinder(d = 3, h = 2);
+                cylinder(d = 3 + clearance, h = 2);
             }
     }
 
