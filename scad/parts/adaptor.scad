@@ -22,6 +22,7 @@ module adaptor() {
     module fin() {
         intersection() {
             rotate([0, 0, 60])
+            translate([0, -1, 0])
             square([r, 2]);
 
             // Intersect with blind's inner radius to ensure edges of fin doesn't
