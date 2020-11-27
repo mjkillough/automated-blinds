@@ -59,7 +59,7 @@ module bracket() {
 
             // Nema 17's circular base
             translate([9 + 11, 60 - 9 - 11, 0])
-            cylinder(r = 11, h = 1.75);
+            cylinder(r = 12, h = 2.25);
 
             // Nema 17's shaft
             translate([20, 40, 0])
