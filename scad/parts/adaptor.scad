@@ -16,6 +16,7 @@ module adaptor() {
     // Height of lip, that sits between blind and bracket:
     lip_height = 2;
     // Diameter of shaft:
+    shaft_clearance = 0.2;
     shaft_diameter = 5;
 
     module fin() {
@@ -46,14 +47,14 @@ module adaptor() {
         translate([0, 0, circular_height])
         linear_extrude(height = flat_height)
         difference() {
-            circle(d = shaft_diameter);
+            circle(d = shaft_diameter + shaft_clearance);
 
             translate([-(shaft_diameter / 2), 2])
-            square([shaft_diameter, shaft_diameter]);
+            square([shaft_diameter + shaft_clearance, shaft_diameter]);
         }
 
         // Round bit:
-        cylinder(d = shaft_diameter, h = circular_height);
+        cylinder(d = shaft_diameter + shaft_clearance, h = circular_height);
     }
 
     difference() {
