@@ -23,7 +23,7 @@ module bracket() {
         $fn = 60;
         d = 44;
         r = d / 2;
-        clearance = 0.2;
+        clearance = 0.4;
         for (i = [45:90:360])
             rotate([0, 0, i])
             translate([r, 0, 0]) {
@@ -41,7 +41,7 @@ module bracket() {
 
     module blinds_holder() {
         $fn = 60;
-        clearance = 0.2;
+        clearance = 0.4;
         d = 8 + clearance;
 
         // Slot to allow blind to placed in from above.
